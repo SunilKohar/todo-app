@@ -24,12 +24,25 @@ function App() {
    
   }
   
+
+  function toggleCompleted(id){
+    setTodos(todos.map(todo => {
+      if(todo.id===id){
+        return{
+          ...todo,
+          isCompleted:!todo.isCompleted
+        }
+      }
+      return todo;
+      }))
+    }  
+  
   return (
     <div className="container">
       <div className='inner-container'> 
         <Header/>
         <TodoForm addTodo={addTodo} />
-        <TodoList todos={todos}/>
+        <TodoList todos={todos} toggleCompleted={toggleCompleted}/>
         
       </div> 
     </div>
