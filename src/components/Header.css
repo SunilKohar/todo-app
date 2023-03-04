@@ -1,0 +1,28 @@
+.header {
+  font-size: 28px;
+  font-weight: 600;
+  padding: 20px;
+
+  /* text-align: center; */
+}
+
+.header-Container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.header-Day .header-day_day {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+/* .header-logo {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #5a5fe1;
+} */
+.header-Day .header-month {
+  font-size: 18px;
+  font-weight: 200;
+  color: #5a5fe1;
+}
