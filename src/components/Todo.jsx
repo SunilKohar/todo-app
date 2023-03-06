@@ -13,7 +13,9 @@ function Todo({todo, toggleCompleted}) {
         <p>{todo.date}</p>
         
       </div>
-      <button>X</button>
+      <div className='todo-delete'>
+      <button onClick={()=>deleteTodo(todo.id)}>X</button>
+      </div>
     </div>
   )
 }

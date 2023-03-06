@@ -37,12 +37,17 @@ function App() {
       }))
     }  
   
+  function deleteTodo(id){
+    setTodos(todos.filter(todo=>todo.id !==id))
+  }
   return (
     <div className="container">
       <div className='inner-container'> 
         <Header/>
         <TodoForm addTodo={addTodo} />
-        <TodoList todos={todos} toggleCompleted={toggleCompleted}/>
+        <TodoList todos={todos} toggleCompleted={toggleCompleted}
+        deleteTodo={deleteTodo}
+        />
         
       </div> 
     </div>
